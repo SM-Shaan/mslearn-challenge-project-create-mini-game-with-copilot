@@ -7,6 +7,7 @@ print('Hello World')
 # At each round, the player must enter one of the options in the list and be informed if they won, lost, or tied with the opponent.
 # By the end of each round, the player can choose whether to play again.
 # Display the player's score at the end of the game.
+# If the player chooses wrong spelling for "yes/no" option. ask again until the player enters a valid option.
 # The minigame must handle user inputs, putting them in lowercase and informing the user if the option is invalid.
 
 
@@ -33,6 +34,9 @@ def rock_paper_scissors():
             computer_score += 1
         print(f'Player: {player_score} - Computer: {computer_score}')
         play_again = input('Do you want to play again? (yes/no): ').lower()
+        while play_again not in ['yes', 'no']:
+            print('Invalid option. Please enter yes or no.')
+            play_again = input('Do you want to play again? (yes/no): ').lower()
         if play_again == 'no':
             break
     print(f'Final score: Player: {player_score} - Computer: {computer_score}')
