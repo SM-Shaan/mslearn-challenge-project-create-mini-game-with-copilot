@@ -27,7 +27,7 @@ def rock_paper_scissors():
             print('Tie!')
         elif (player_input == 'rock' and computer_input == 'scissors') or (player_input == 'paper' and computer_input == 'rock') or (player_input == 'scissors' and computer_input == 'paper'):
             print('You won!')
-            player_score += 
+            player_score += 1
         else:
             print('You lost!')
             computer_score += 1
